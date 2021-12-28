@@ -1,6 +1,6 @@
 import CoreServices from './coreServices';
-import { FILE } from '../constants';
 import axios from 'axios';
+import { FILE } from '../constants/services';
 
 class FileServices extends CoreServices {
   async UPLOAD_FILE(payload) {

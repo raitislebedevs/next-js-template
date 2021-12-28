@@ -35,3 +35,7 @@ export const FILE = {
   BASE: "/upload",
   FILE: "/files",
 };
+
+export const LANGUAGES = {
+  BASE: "/languages",
+};

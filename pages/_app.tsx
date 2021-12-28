@@ -1,11 +1,28 @@
 import { Provider } from 'react-redux'
+import { Footer, Navbar } from '../components/layouts';
 import store from '../redux/store'
-import '../styles/globals.css'
+import '../styles/main.scss'
 
-function MyApp({ Component, pageProps }) {
-  return <Provider store={store}> 
-  <Component {...pageProps} />
-  </Provider>
+function App({ Component, pageProps }) {
+
+  return (
+    <Provider store={store}>
+    <Navbar />
+    <Component {...pageProps} />
+    <Footer />  
+  </Provider>)
 }
 
-export default MyApp
+App.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {};
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  return {
+    pageProps,
+  };
+};
+
+export default App

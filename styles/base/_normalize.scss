@@ -1,0 +1,38 @@
+*,
+*:focus,
+*:hover {
+  outline: none !important;
+}
+
+body,
+html,
+#__next {
+  height: 100%;
+  overflow: hidden;
+}
+
+#__next {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Open Sans", "Roboto", "Segoe UI", sans-serif;
+
+  white-space: normal !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}

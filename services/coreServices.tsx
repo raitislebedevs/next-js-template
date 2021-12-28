@@ -4,7 +4,10 @@ import Cookies from 'js-cookie';
 import qs from 'qs';
 
 class CoreServices {
-  constructor(service) {
+  service: string;
+  apiEnpoint: string;
+
+  constructor(service: string) {
     this.service = service;
     this.apiEnpoint = `${config.API.ENDPOINT}${config.API.SUFFIX || ''}`;
   }

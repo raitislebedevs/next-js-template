@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AUTH } from '../constants';
+import { AUTH } from '../constants/services';
 import CoreServices from './coreServices';
 
 class ConnectionServices extends CoreServices {
@@ -109,4 +109,4 @@ class ConnectionServices extends CoreServices {
   }
 }
 
-export default new ConnectionServices();
+export default new ConnectionServices('');

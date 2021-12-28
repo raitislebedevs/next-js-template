@@ -1,5 +1,5 @@
+import { USERINFO } from '../constants/services';
 import CoreServices from './coreServices';
-import { USERINFO } from '../constants';
 
 class UserInfoServices extends CoreServices {}
 
