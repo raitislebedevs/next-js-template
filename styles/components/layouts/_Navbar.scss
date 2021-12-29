@@ -2,6 +2,7 @@
   height: 5rem;
   #logo {
     position: absolute;
+    top: 1rem;
     left: 2rem;
     img {
       width: auto;
@@ -12,5 +13,9 @@
     position: absolute;
     top: 1rem;
     right: 2rem;
+
+    @media screen and (max-width: $md) {
+      visibility: hidden;
+    }
   }
 }
