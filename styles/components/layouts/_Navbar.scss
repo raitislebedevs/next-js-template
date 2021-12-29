@@ -1,19 +1,16 @@
 .navbar {
-  img {
-    width: auto;
-    height: 45px;
+  height: 5rem;
+  #logo {
+    position: absolute;
+    left: 2rem;
+    img {
+      width: auto;
+      height: 45px;
+    }
   }
-  height: 56px;
   .navbar-nav {
     position: absolute;
-    display: flex;
     top: 1rem;
     right: 2rem;
-    .nav-item {
-      width: 100%;
-      a {
-        width: 100%;
-      }
-    }
   }
 }

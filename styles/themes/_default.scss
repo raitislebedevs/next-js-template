@@ -1,4 +1,13 @@
-$theme-colors: (
+$default-theme: (
+  primary: $dark-red,
+  primary-cv: $dark-blue,
+  primary-green: $dark-green,
+  light: white,
+  secondary: $dark-red-2,
+  secondary-2: $gray-text,
+);
+
+$dark-theme: (
   primary: $dark-red,
   primary-cv: $dark-blue,
   primary-green: $dark-green,

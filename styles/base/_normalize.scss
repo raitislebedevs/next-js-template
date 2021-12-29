@@ -7,6 +7,8 @@
 body,
 html,
 #__next {
+  padding: 0px;
+  margin: 0px;
   height: 100%;
   overflow: hidden;
 }
@@ -19,20 +21,19 @@ html,
 
 body {
   font-family: "Open Sans", "Roboto", "Segoe UI", sans-serif;
-
-  white-space: normal !important;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
-
 p {
   margin-bottom: 0;
+}
+
+.body {
+  height: 100%;
 }

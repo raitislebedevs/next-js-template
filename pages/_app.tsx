@@ -1,16 +1,19 @@
-import { Provider } from 'react-redux'
-import { Footer, Navbar } from '../components/layouts';
-import store from '../redux/store'
-import '../styles/main.scss'
+import { Provider } from "react-redux";
+import { Footer, Navbar } from "../components/layouts";
+import store from "../redux/store";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/main.scss";
 
 function App({ Component, pageProps }) {
-
   return (
     <Provider store={store}>
-    <Navbar />
-    <Component {...pageProps} />
-    <Footer />  
-  </Provider>)
+      <Navbar />
+      <div className="body">
+        <Component {...pageProps} />
+      </div>
+      <Footer />
+    </Provider>
+  );
 }
 
 App.getInitialProps = async ({ Component, ctx }) => {
@@ -25,4 +28,4 @@ App.getInitialProps = async ({ Component, ctx }) => {
   };
 };
 
-export default App
+export default App;

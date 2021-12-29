@@ -1,11 +1,7 @@
-import PropTypes from 'prop-types';
+import { Container } from "react-bootstrap";
 
 const NotFound = (props) => {
-  return <p> ERROR PAGE</p>;
-};
-
-NotFound.propTypes = {
-  t: PropTypes.func.isRequired,
+  return <Container> ERROR PAGE Placeholder</Container>;
 };
 
 export default NotFound;
