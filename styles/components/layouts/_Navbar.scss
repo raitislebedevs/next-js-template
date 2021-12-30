@@ -1,21 +1,57 @@
 .navbar {
   height: 5rem;
-  #logo {
+  .logo {
     position: absolute;
     top: 1rem;
-    left: 2rem;
+    left: 1rem;
     img {
       width: auto;
       height: 45px;
     }
   }
+  #web-logo {
+    transition: all 0.5s;
+    opacity: 1;
+    @media screen and (max-width: $md) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  #mobile-logo {
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    @media screen and (max-width: $md) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
   .navbar-nav {
+    transition: all 0.5s;
+    opacity: 1;
     position: absolute;
     top: 1rem;
     right: 2rem;
-
     @media screen and (max-width: $md) {
+      opacity: 0;
       visibility: hidden;
+    }
+  }
+  #mobile-nav {
+    transition: all 0.5s;
+    opacity: 0;
+    font-size: 2rem;
+    visibility: hidden;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    @media screen and (max-width: $md) {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

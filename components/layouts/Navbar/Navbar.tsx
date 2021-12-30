@@ -5,8 +5,12 @@ import { useRouter } from "next/router";
 import compose from "recompose/compose";
 import { connect } from "react-redux";
 import { setLoadingUser } from "../../../redux/actions";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { DropDownList } from "../../common";
 
-const logo = "/static/images/logo.png";
+const logo = "/static/images/logo.svg";
+const mobileLogo = "/static/favicon.svg";
 
 const Navbar = (props) => {
   const { dispatch, user, isLogged, isLoadingUser } = props;
@@ -43,10 +47,17 @@ const Navbar = (props) => {
 
   return (
     <NavbarBootstrap sticky="top">
-      <div id="logo">
+      <div className="logo" id="web-logo">
         <Link href="/">
           <NavbarBootstrap.Brand href="/">
             <img src={logo} alt="Placifull" />
+          </NavbarBootstrap.Brand>
+        </Link>
+      </div>
+      <div className="logo" id="mobile-logo">
+        <Link href="/">
+          <NavbarBootstrap.Brand href="/">
+            <img src={mobileLogo} alt="Placifull" />
           </NavbarBootstrap.Brand>
         </Link>
       </div>
@@ -88,6 +99,10 @@ const Navbar = (props) => {
           </Nav.Link>
         </Nav.Item>
       </Nav>
+
+      <div id="mobile-nav">
+        <FontAwesomeIcon icon={faBars} />
+      </div>
     </NavbarBootstrap>
   );
 };
